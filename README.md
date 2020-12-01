@@ -1,27 +1,18 @@
 [![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
 
-# [Name of Project] [build badges go here when available]
+# nr-postman-examples
 
->[Brief description - what is the project and value does it provide? How often should users expect to get releases? How is versioning set up? Where does this project want to go?]
+> This project contains a set of collections to be utilized within Postman, (www.postman.com).   The collections contain valious NewRelic api example requests.    
 
 ## Installation
 
-> [Include a step-by-step procedure on how to get your code installed. Be sure to include any third-party dependencies that need to be installed separately]
+> Download the repository, which contains the various request collections.  Each collection, can then be imported into Postman (see www.postman.com for import instructions)
 
 ## Getting Started
->[Simple steps to start working with the software similar to a "Hello World"]
+> After import,  please see www.postman.com for using the requests. 
 
 ## Usage
->[**Optional** - Include more thorough instructions on how to use the software. This section might not be needed if the Getting Started section is enough. Remove this section if it's not needed.]
-
-
-## Building
-
->[**Optional** - Include this section if users will need to follow specific instructions to build the software from source. Be sure to include any third party build dependencies that need to be installed separately. Remove this section if it's not needed.]
-
-## Testing
-
->[**Optional** - Include instructions on how to run tests if we include tests with the codebase. Remove this section if it's not needed.]
+>  see www.postman.com
 
 ## Support
 
@@ -40,5 +31,5 @@ As noted in our [security policy](../../security/policy), New Relic is committed
 If you believe you have found a security vulnerability in this project or any of New Relic's products or websites, we welcome and greatly appreciate you reporting it to New Relic through [HackerOne](https://hackerone.com/newrelic).
 
 ## License
-[Project Name] is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
->[If applicable: The [project name] also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.]
+nr-postman-examples is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
+>[If applicable: The nr-postman-examples also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.]
