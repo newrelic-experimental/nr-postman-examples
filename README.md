@@ -2,11 +2,11 @@
 
 # nr-postman-examples
 
-> This project contains a set of collections to be utilized within Postman, (www.postman.com).   The collections contain valious NewRelic api example requests.    
+> This project contains a set of collections to be utilized within Postman, (www.postman.com).   The collections contain valious NewRelic api example requests.  The collections are named per there function.    
 
 ## Installation
 
-> Download the repository, which contains the various request collections.  Each collection, can then be imported into Postman (see www.postman.com for import instructions)
+> Download the repository, which contains the various request collections.  Each collection can then be imported into Postman (see www.postman.com for import instructions)
 
 ## Getting Started
 > After import,  please see www.postman.com for using the requests. 
@@ -18,7 +18,7 @@
 
 New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
 
->Add the url for the support thread here
+>
 
 ## Contributing
 We encourage your contributions to improve [project name]! Keep in mind when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project.
