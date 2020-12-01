@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "d5da4810-73d1-407c-b2ba-3035271e9ec8",
+		"name": "NewRelic Alert Conditions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Alert Polcity Condition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{api-key}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"condition\": {\r\n            \"type\": \"apm_app_metric\",\r\n            \"name\": \"Apdex (Low)-copied\",\r\n            \"enabled\": false,\r\n            \"entities\": [\r\n                \"448184552\"\r\n            ],\r\n            \"metric\": \"apdex\",\r\n            \"condition_scope\": \"application\",\r\n            \"terms\": [\r\n                {\r\n                    \"duration\": \"5\",\r\n                    \"operator\": \"below\",\r\n                    \"priority\": \"critical\",\r\n                    \"threshold\": \".9\",\r\n                    \"time_function\": \"all\"\r\n                }\r\n            ]\r\n        }\r\n }",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.newrelic.com/v2/alerts_conditions/policies/1133009.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alerts_conditions",
+						"policies",
+						"1133009.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

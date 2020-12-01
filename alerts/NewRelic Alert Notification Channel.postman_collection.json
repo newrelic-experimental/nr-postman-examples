@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "8ebb642d-2bd3-4e86-b961-6ab30444dbc1",
+		"name": "NewRelic Alert Notification Channel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Alert_Notification_Channel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{api-key}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"channel\": {\r\n    \"name\": \"postman_channel\",\r\n    \"type\": \"email\",\r\n    \"configuration\": {\r\n            \"recipients\" : \"test@google.com\",\r\n            \"include_json_attachment\" : true\r\n            }\r\n  }\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.newrelic.com/v2/alerts_channels.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alerts_channels.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

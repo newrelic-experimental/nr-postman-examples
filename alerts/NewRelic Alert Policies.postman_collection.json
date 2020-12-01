@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "967da2cd-7bcc-4c6a-86c9-ccab6d899753",
+		"name": "NewRelic Alert Policies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Alert_Policy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"policy\": {\r\n    \"incident_preference\": \"PER_CONDITION\",\r\n    \"name\": \"nicks_alert_pol\"\r\n  }\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.newrelic.com/v2/alerts_policies.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alerts_policies.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Policy Conditions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{api-key}}"
+					},
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.newrelic.com/v2/alerts_conditions.json?policy_id=602766",
+					"protocol": "https",
+					"host": [
+						"api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alerts_conditions.json"
+					],
+					"query": [
+						{
+							"key": "policy_id",
+							"value": "602766"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Alert_Policy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{api-key}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"policy\": {\r\n    \"incident_preference\": \"PER_POLICY\",\r\n    \"name\": \"postmane_policy3\"\r\n  }\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.newrelic.com/v2/alerts_policies/1132942.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alerts_policies",
+						"1132942.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Alert_Policy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{api-key}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"policy\": {\r\n    \"incident_preference\": \"PER_POLICY\",\r\n    \"name\": \"postmane_policy3\"\r\n  }\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.newrelic.com/v2/alerts_policies/1146628.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alerts_policies",
+						"1146628.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
