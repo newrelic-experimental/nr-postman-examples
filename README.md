@@ -9,8 +9,17 @@
 > Download the repository, which contains the various request collections.  Each collection can then be imported into Postman (see www.postman.com for import instructions)
 
 ## Getting Started
-> After import,  please see www.postman.com for using the requests.  Please note that some of the requests depend on a postman enviornment variable called "api-key", which is your NewRelic
-api key.   Please make sure to set this prior to using the requests that depend on that variable.  
+> After import,  please see www.postman.com for using the requests.
+As of 12/15/2020 these are the enviornment variables being referenced in valious requests:
+POSTMAN ENV VAR NAME        Description
+=========================================================
+{{api-key}}                this is your user account api-ky
+{{insights-insert-key}}    insight inert key
+{{insights-query-key}}     insights query key
+{{ingest-key}}             User ingest key
+{{account}}                RPM account number
+
+Please setup an "enviornment" with these variables setup. 
 
 ## Usage
 >  see www.postman.com
