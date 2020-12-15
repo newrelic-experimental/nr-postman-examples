@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "b6c621e8-6215-4d99-b57e-f6b05af24f5c",
+		"name": "NewRelic_Logs_Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post_log_data_example_admin_api_key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-License-Key",
+						"type": "text",
+						"value": "{{ingest-key}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"timestamp\": 1607738018,\r\n     \"message\": \"User 'abccclkjl' logged in\",\r\n     \"logtype\": \"accesslogs\",\r\n     \"service\": \"login-service\",\r\n     \"hostname\": \"login.example.com\"\r\n   }",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://log-api.newrelic.com/log/v1",
+					"protocol": "https",
+					"host": [
+						"log-api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"log",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_log_data_example_insights_insert_api_key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"type": "text",
+						"value": "{{insights-insert-key}}"
+					},
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"timestamp\": 1607729018,\r\n     \"message\": \"User 'abccclkjl' logged in\",\r\n     \"logtype\": \"accesslogs\",\r\n     \"service\": \"login-service\",\r\n     \"hostname\": \"login.example.com\"\r\n   }",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://log-api.newrelic.com/log/v1",
+					"protocol": "https",
+					"host": [
+						"log-api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"log",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
