@@ -11,13 +11,14 @@
 ## Getting Started
 > After import,  please see www.postman.com for using the requests.
 As of 12/15/2020 these are the enviornment variables being referenced in valious requests:
-POSTMAN ENV VAR NAME        Description
-=========================================================
-{{api-key}}                this is your user account api-ky
-{{insights-insert-key}}    insight inert key
-{{insights-query-key}}     insights query key
-{{ingest-key}}             User ingest key
-{{account}}                RPM account number
+
+| POSTMAN ENV VAR NAME       | Description                  |
+| ---------------------------| ---------------------------- |
+| {{api-key}}                | default user account api-key |
+| {{insights-insert-key}}    | insight inert key            |
+| {{insights-query-key}}     | insights query key           |
+| {{ingest-key}}             | User ingest key              |
+| {{account}}                | RPM account number           |
 
 Please setup an "enviornment" with these variables setup. 
 
