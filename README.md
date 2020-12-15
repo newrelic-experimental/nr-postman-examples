@@ -15,9 +15,9 @@ As of 12/15/2020 these are the enviornment variables being referenced in valious
 | POSTMAN ENV VAR NAME       | Description                  |
 | ---------------------------| ---------------------------- |
 | {{api-key}}                | default user account api-key |
-| {{insights-insert-key}}    | insight inert key            |
+| {{insights-insert-key}}    | insight insert key            |
 | {{insights-query-key}}     | insights query key           |
-| {{ingest-key}}             | User ingest key              |
+| {{ingest-key}}             | Admin User ingest key              |
 | {{account}}                | RPM account number           |
 
 Please setup an "enviornment" with these variables setup. 
