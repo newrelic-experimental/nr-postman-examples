@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "a450fa41-e36d-4441-866a-85cfbfe3de1a",
+		"name": "NewRelic_Insight_Events_Metrics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insights_insert_event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-Insert-Key",
+						"value": "{{insights-insert-key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"eventType\":\"pdtest\",\r\n    \"account\":3,\r\n    \"amount\":259.54\r\n  },\r\n  {\r\n    \"eventType\":\"pdtest\",\r\n    \"account\":5,\r\n    \"amount\":12309,\r\n    \"product\":\"Item\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://insights-collector.newrelic.com/v1/accounts/{{acount}}/events",
+					"protocol": "https",
+					"host": [
+						"insights-collector",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v1",
+						"accounts",
+						"{{acount}}",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metrics_Insert_api",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c6830036-558d-46a7-aad4-03c7c0ce01bb",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-Insert-Key",
+						"type": "text",
+						"value": "{{insights-insert-key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{ \r\n        \"metrics\":[{ \r\n           \"name\":\"metric_nick\", \r\n           \"type\":\"gauge\", \r\n           \"value\":1.0, \r\n           \"timestamp\":{{$timestamp}}, \r\n          \"attributes\":{\"app.id\":\"12304\",\"app.store\": \"apple\", \"app.version\": \"2.34.1\"}\r\n           }] \r\n},\r\n{ \r\n        \"metrics\":[{ \r\n           \"name\":\"metric_nick\", \r\n           \"type\":\"gauge\", \r\n           \"value\":1.1, \r\n           \"timestamp\":{{$timestamp}}, \r\n          \"attributes\":{\"app.id\":\"6789\",\"app.store\": \"google\", \"app.version\": \"2.00.1\"}\r\n           }] \r\n}\r\n\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://metric-api.newrelic.com/metric/v1",
+					"protocol": "https",
+					"host": [
+						"metric-api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"metric",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insights_query_call_NRQL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Query-Key",
+						"type": "text",
+						"value": "{{insights-query-key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://insights-api.newrelic.com/v1/accounts/{{account}}/query?nrql=SELECT%20average(duration)%20FROM%20PageView",
+					"protocol": "https",
+					"host": [
+						"insights-api",
+						"newrelic",
+						"com"
+					],
+					"path": [
+						"v1",
+						"accounts",
+						"{{account}}",
+						"query"
+					],
+					"query": [
+						{
+							"key": "nrql",
+							"value": "SELECT%20average(duration)%20FROM%20PageView"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
